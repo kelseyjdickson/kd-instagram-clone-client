@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* POSTS CONTAINER */
+.posts-container{
+  border: 1px solid lightgray;
+  width: 750px;
+  list-style-type: none;
+}
+.posts-image{
+  height: 300px;
+}

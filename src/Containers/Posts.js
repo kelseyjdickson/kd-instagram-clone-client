@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
 
-
 export default function Photos() {
     const [posts, setPosts] = useState([])
     useEffect(()=>{
@@ -14,9 +13,9 @@ export default function Photos() {
     let displayInfo = posts.map((post) => {
         return(
 
-        <ul>
-            <img src={post.photo_url} alt="post"></img>
-            <li key={post.id}>{post.caption}</li>
+        <ul  className="posts-container">
+            <img className="posts-image"src={post.photo_url} alt="post"></img>
+            <li key={post.id}><b>{post.caption}</b></li>
             <p>{post.likes}❤️</p>
         </ul>
         )
@@ -27,8 +26,9 @@ export default function Photos() {
     
     return (
         <div>
-            <h1>Photos</h1>
+            <div>
             {displayInfo}
+            </div>
             {/* {posts[0] ? {displayInfo} : <h2>Loading..</h2>} */}
         </div>
     )
