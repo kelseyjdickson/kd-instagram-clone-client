@@ -8,11 +8,26 @@ export default function Photos() {
         fetch("http://localhost:3001/posts")
         .then(res => res.json())
         .then(setPosts)
-    })
+    },[])
+
+    let displayInfo = posts.map((post) => {
+        return(
+
+        <ul>
+            <img src={post.photo_url} alt="post"></img>
+            <li key={post.id}>{post.caption}</li>
+        </ul>
+        )
+
+
+    }
+    )
+    
     return (
         <div>
             <h1>Photos</h1>
-            {/* {posts[0] ? <img src={posts[0].photo_url}/> : <h2>Loading..</h2>} */}
+            {displayInfo}
+            {/* {posts[0] ? {displayInfo} : <h2>Loading..</h2>} */}
         </div>
     )
 }

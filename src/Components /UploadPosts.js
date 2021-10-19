@@ -37,7 +37,7 @@ export default function UploadPosts() {
       })
       .then(res => res.json())
       .then(data => {
-        formData(data)
+        setFormData(data)
       })
       .catch(err => console.error(err))
 

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components /Home";
 import NavBar from "./Components /NavBar";
 import UploadPosts from "./Components /UploadPosts";
-import Posts from './Components /Posts'
+import Posts from './Containers/Posts'
 function App() {
   return (
     <Router>
