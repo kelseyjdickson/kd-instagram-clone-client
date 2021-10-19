@@ -9,6 +9,7 @@ export default function Photos() {
         .then(res => res.json())
         .then(setPosts)
     },[])
+    console.log(posts)
 
     let displayInfo = posts.map((post) => {
         return(
@@ -16,6 +17,7 @@ export default function Photos() {
         <ul>
             <img src={post.photo_url} alt="post"></img>
             <li key={post.id}>{post.caption}</li>
+            <p>{post.likes}❤️</p>
         </ul>
         )
 
